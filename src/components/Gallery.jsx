@@ -12,9 +12,9 @@ const Gallery = () => {
             <img src={`images/gallery${index}.jpg`} alt="" />
             <h3 className="title">best events</h3>
             <div className="icons">
-              <a href="#" className="fas fa-heart"></a>
-              <a href="#" className="fas fa-share"></a>
-              <a href="#" className="fas fa-eye"></a>
+              <a href="/" className="fas fa-heart"></a>
+              <a href="/" className="fas fa-share"></a>
+              <a href="/" className="fas fa-eye"></a>
             </div>
           </div>
         ))}

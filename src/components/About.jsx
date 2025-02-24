@@ -21,7 +21,7 @@ const About = () => {
             vero expedita incidunt provident quibusdam aut odit, numquam
             nesciunt similique nisi.
           </p>
-          <a href="#" className="btn">reach us</a>
+          <a href="/" className="btn">reach us</a>
         </div>
       </div>
     </section>

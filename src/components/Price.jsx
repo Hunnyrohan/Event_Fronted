@@ -16,7 +16,7 @@ const Price = () => {
             <li><i className="fas fa-check"></i> food and drinks</li>
             <li><i className="fas fa-check"></i> invitation card</li>
           </ul>
-          <a href="#" className="btn">check out</a>
+          <a href="/" className="btn">check out</a>
         </div>
 
         <div className="box">
@@ -29,7 +29,7 @@ const Price = () => {
             <li><i className="fas fa-check"></i> food and drinks</li>
             <li><i className="fas fa-check"></i> invitation card</li>
           </ul>
-          <a href="#" className="btn">check out</a>
+          <a href="/" className="btn">check out</a>
         </div>
 
         <div className="box">
@@ -42,7 +42,7 @@ const Price = () => {
             <li><i className="fas fa-check"></i> food and drinks</li>
             <li><i className="fas fa-check"></i> invitation card</li>
           </ul>
-          <a href="#" className="btn">check out</a>
+          <a href="/" className="btn">check out</a>
         </div>
 
         <div className="box">
@@ -55,7 +55,7 @@ const Price = () => {
             <li><i className="fas fa-check"></i> food and drinks</li>
             <li><i className="fas fa-check"></i> invitation card</li>
           </ul>
-          <a href="#" className="btn">check out</a>
+          <a href="/" className="btn">check out</a>
         </div>
       </div>
     </section>

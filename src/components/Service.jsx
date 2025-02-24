@@ -35,7 +35,7 @@ const Service = () => {
 
         <div className="box">
           <i className="fas fa-car"></i>
-          <h3>enent vehicles</h3>
+          <h3>event vehicles</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
             suscipit.
