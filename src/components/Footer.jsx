@@ -6,11 +6,11 @@ const Footer = () => {
       <div className="box-container">
         <div className="box">
           <h3>branches</h3>
-          <a href="#"> <i className="fas fa-map-marker-alt"></i> bangalore </a>
-          <a href="#"> <i className="fas fa-map-marker-alt"></i> hyderabad </a>
-          <a href="#"> <i className="fas fa-map-marker-alt"></i> delhi </a>
-          <a href="#"> <i className="fas fa-map-marker-alt"></i> kolkata </a>
-          <a href="#"> <i className="fas fa-map-marker-alt"></i> chennai </a>
+          <a href="#"> <i className="fas fa-map-marker-alt"></i> Kathmandu </a>
+          <a href="#"> <i className="fas fa-map-marker-alt"></i> Pokhara </a>
+          <a href="#"> <i className="fas fa-map-marker-alt"></i> Janakpur </a>
+          <a href="#"> <i className="fas fa-map-marker-alt"></i> Butwal </a>
+          <a href="#"> <i className="fas fa-map-marker-alt"></i> Ramgopalpur </a>
         </div>
         <div className="box">
           <h3>quick links</h3>
@@ -24,12 +24,12 @@ const Footer = () => {
         </div>
         <div className="box">
           <h3>contact info</h3>
-          <a href="#"> <i className="fas fa-phone"></i> +123-456-7890 </a>
-          <a href="#"> <i className="fas fa-phone"></i> +123-456-7890 </a>
-          <a href="#"> <i className="fas fa-envelope"></i> kanasu@gmail.com </a>
-          <a href="#"> <i className="fas fa-envelope"></i> kanasuind@gmail.com </a>
+          <a href="#"> <i className="fas fa-phone"></i> 9827839930 </a>
+          <a href="#"> <i className="fas fa-phone"></i> 9864089451 </a>
+          <a href="#"> <i className="fas fa-envelope"></i> roohanyadav45@gmail.com </a>
+          <a href="#"> <i className="fas fa-envelope"></i> massterforu@gmail.com </a>
           <a href="#">
-            <i className="fas fa-map-marker-alt"></i> bangalore, india - 560054
+            <i className="fas fa-map-marker-alt"></i> Kathmandu, Nepal - 44600
           </a>
         </div>
         <div className="box">
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="credit">
-        created by <span>Tivotal</span> | all rights reserved
+        created by <span>Rohan</span> | all rights reserved
       </div>
     </section>
   );

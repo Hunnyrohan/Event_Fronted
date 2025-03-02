@@ -42,9 +42,9 @@ const Home = () => {
       <div className="content">
         <h3>
           where your ideas take off
-          <span> Eve events </span>
+          <span> Hamro Event </span>
         </h3>
-        <a href="/#quote" className="btn">Get Quote</a>
+        {/* <a href="/#quote" className="btn">Get Quote</a> */}
       </div>
 
       <div className="swiper-container home-slider">

@@ -1,66 +1,162 @@
-
-body {
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
-}
+/* src/components/Auth.css */
 
 .auth {
-    max-width: 400px;
-    margin: 5rem auto;
-    padding: 2rem;
-    background: #333;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    color: #fff;
-    text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+  padding: 2rem 9%;
+}
+
+.auth-container {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 4rem 3rem;
+  max-width: 45rem;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.heading {
+  font-size: 3rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.heading span {
+  color: var(--theme-color);
+}
+
+.inputBox {
+  margin: 1.5rem 0;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputBox input::placeholder {
+  color: var(--secondary-text-color);
+  text-transform: capitalize;
+}
+
+.inputBox input:focus {
+  border-color: var(--theme-color);
+  box-shadow: 0 0 10px rgba(56, 103, 214, 0.2); /* Matches --theme-color #3867d6 */
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.7rem;
+  background: var(--button-background);
+  color: #fff;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: var(--button-hover-background);
+  transform: scale(1.03);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  background: #ffe6e6;
+  padding: 0.8rem;
+  border-radius: 5px;
+}
+
+.auth-link {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: var(--secondary-text-color);
+}
+
+.auth-link a {
+  color: var(--theme-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.auth-link a:hover {
+  color: var(--button-hover-background);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .auth .heading {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth {
+    padding: 2rem 5%;
+  }
+
+  .auth-container {
+    padding: 3rem 2rem;
+  }
+
+  .heading {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--theme-color);
   }
-  
-  .inputBox {
-    margin: 1rem 0;
-  }
-  
+
   .inputBox input {
-    width: 100%;
+    font-size: 1.4rem;
     padding: 1rem;
-    border-radius: 5px;
-    border: none;
-    background: #444;
-    color: #fff;
-    font-size: 1.5rem;
-    /* transition: background 0.3s, box-shadow 0.3s; */
   }
-  
-  .inputBox input::placeholder {
-    color: #bbb;
-  }
-  
-  .inputBox input:focus {
-    background: #555;
-    box-shadow: 0 0 10px var(--theme-color);
-  }
-  
+
   .btn {
-    padding: 1rem 3rem;
     font-size: 1.5rem;
-    border-radius: 5px;
-    background: var(--theme-color);
-    color: #fff;
-    cursor: pointer;
-    border: none;
-    /* transition: background 0.3s, transform 0.3s; */
+    padding: 1rem;
   }
-  
-  .btn:hover {
-    background: #555;
-    transform: scale(1.05);
+
+  .auth-link {
+    font-size: 1.4rem;
   }
-  
-  .btn:active {
-    transform: scale(0.95);
+}
+
+@media (max-width: 450px) {
+  .auth-container {
+    padding: 2rem 1.5rem;
   }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .inputBox input {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+  }
+}

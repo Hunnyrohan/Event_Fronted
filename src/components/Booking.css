@@ -1,0 +1,24 @@
+/* src/components/Booking.css */
+
+/* ... Existing styles ... */
+
+/* Book Now button styles */
+.booking .book-now-btn {
+  background: #ff6347; /* Red button background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 1rem 0; /* Spacing below button */
+  width: 100%; /* Full width on mobile, adjust for desktop */
+  max-width: 200px; /* Limit width on desktop */
+}
+
+.booking .book-now-btn:hover {
+  background: #ff4500; /* Darker red on hover */
+}
+
+/* ... Existing responsive styles ... */

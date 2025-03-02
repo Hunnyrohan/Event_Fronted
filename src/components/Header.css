@@ -1,0 +1,80 @@
+/* src/components/Header.css */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #16213e; /* Dark navy blue for consistency */
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header .logo {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .header .logo span {
+    color: #ff6347; /* Red accent for "H" */
+  }
+  
+  .header .navbar {
+    display: flex;
+  }
+  
+  .header .navbar a {
+    font-size: 1.7rem;
+    color: #fff;
+    margin-left: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+  }
+  
+  .header .navbar a:hover {
+    color: #ff6347; /* Red accent on hover */
+  }
+  
+  .header #menu-bars {
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .header .navbar.active {
+    left: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .header #menu-bars {
+      display: block;
+    }
+  
+    .header .navbar {
+      position: fixed;
+      top: 100%;
+      left: -120%;
+      width: 100%;
+      background: #16213e;
+      padding: 2rem;
+      transition: 0.3s linear;
+    }
+  
+    .header .navbar.active {
+      left: 0;
+    }
+  
+    .header .navbar a {
+      display: block;
+      margin: 1.5rem 0;
+      font-size: 2rem;
+    }
+  }

@@ -1,0 +1,245 @@
+/* src/components/Contact.css */
+
+.contact {
+    padding: 6rem 9%;
+    background: #16213e; /* Dark navy blue for gallery-like feel */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heading {
+    font-size: 4rem;
+    color: #fff; /* White text on dark background */
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  
+  .heading span {
+    color: var(--theme-color); /* #ff6347 (tomato red) */
+  }
+  
+  .contact-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .contact-card {
+    background: #fff; /* White card background for contrast */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .contact-card h2 {
+    font-size: 2.5rem;
+    color: #333; /* Dark text color from App.css */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  
+  .form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 1.6rem;
+    color: #333; /* Dark text color from App.css */
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--theme-color); /* #ff6347 (tomato red) */
+    outline: none;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .submit-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.6rem;
+    background: var(--button-background); /* #ff4500 (orange red) */
+    color: #333; /* Dark text color for contrast */
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .submit-btn:hover {
+    background: var(--theme-color); /* #ff6347 (tomato red) */
+    transform: scale(1.05);
+  }
+  
+  .success-message {
+    font-size: 1.6rem;
+    color: var(--theme-color); /* #ff6347 (tomato red) */
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .info-card p {
+    font-size: 1.6rem;
+    color: #666; /* Secondary text color from App.css */
+    margin-bottom: 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .info-card i {
+    color: var(--theme-color); /* #ff6347 (tomato red) for icons */
+    font-size: 1.8rem;
+  }
+  
+  .map-placeholder {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .map-placeholder:hover {
+    background: #e9e9e9;
+  }
+  
+  .map-placeholder p {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .map-placeholder i {
+    color: var(--theme-color); /* #ff6347 (tomato red) for map icon */
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .contact-container {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .contact-card {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact {
+      padding: 4rem 5%;
+    }
+  
+    .heading {
+      font-size: 3rem;
+    }
+  
+    .contact-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .contact-card {
+      min-width: 100%;
+      max-width: 100%;
+      padding: 2rem 1.5rem;
+    }
+  
+    .contact-card h2 {
+      font-size: 2rem;
+    }
+  
+    .form-group label, .form-group input, .form-group textarea, .submit-btn, .success-message, .info-card p, .map-placeholder p {
+      font-size: 1.4rem;
+    }
+  
+    .info-card i, .map-placeholder i {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .contact {
+      padding: 3rem 3%;
+    }
+  
+    .heading {
+      font-size: 2.5rem;
+    }
+  
+    .contact-card {
+      padding: 1.5rem;
+    }
+  
+    .contact-card h2 {
+      font-size: 1.8rem;
+    }
+  
+    .form-group label, .form-group input, .form-group textarea, .submit-btn, .success-message, .info-card p, .map-placeholder p {
+      font-size: 1.3rem;
+    }
+  
+    .info-card i, .map-placeholder i {
+      font-size: 1.4rem;
+    }
+  }

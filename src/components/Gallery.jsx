@@ -5,7 +5,9 @@ const Gallery = () => {
 
   return (
     <section className="gallery" id="gallery">
-      <h1 className="heading">our <span>gallery</span></h1>
+      <h1 className="heading">
+        our <span>gallery</span>
+        </h1>
       <div className="box-container">
         {images.map((index) => (
           <div className="box" key={index}>

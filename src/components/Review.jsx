@@ -1,106 +1,87 @@
-import React from 'react';
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css';
+import React, { useState, useEffect } from 'react';
+import './Review.css';
 
 const Review = () => {
-  React.useEffect(() => {
-    new Swiper('.review-slider', {
-      slidesPerView: 1,
-      grabCursor: true,
-      loop: true,
-      spaceBetween: 20,
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        700: {
-          slidesPerView: 2,
-        },
-        1050: {
-          slidesPerView: 3,
-        },
-      },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-    });
+  const [reviews, setReviews] = useState([
+    {
+      id: 1,
+      stars: 5,
+      name: 'Ahmed Z.',
+      event: 'Engagement Ceremony',
+      text: 'The event planning team exceeded our expectations for our engagement ceremony. The venue, catering, and entertainment were flawless, making it a magical day. Highly recommended! 🌟',
+      image: '/images/review1.jpg', // Placeholder image for the reviewer
+    },
+    {
+      id: 2,
+      stars: 4,
+      name: 'Sarah M.',
+      event: 'Wedding Reception',
+      text: 'Great service for our wedding reception. The photography and decorations were stunning, though the setup took a bit longer than expected.',
+      image: '/images/review2.jpg',
+    },
+    {
+      id: 3,
+      stars: 5,
+      name: 'Priya K.',
+      event: 'Birthday Party',
+      text: 'Outstanding experience for my daughter’s birthday party! The entertainment and food catering were incredible, creating unforgettable memories.',
+      image: '/images/review3.jpg',
+    },
+  ]);
+
+  // Optional: Fetch reviews from backend
+  useEffect(() => {
+    /*
+    fetch('http://localhost:5000/api/reviews')
+      .then(response => response.json())
+      .then(data => setReviews(data))
+      .catch(error => console.error('Error fetching reviews:', error));
+    */
   }, []);
 
+  // Render star icons based on rating with enhanced design
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <span
+          key={i}
+          className={`star ${i <= rating ? 'filled' : ''}`}
+          role="img"
+          aria-label={`${rating} out of 5 stars`}
+        >
+          🌟
+        </span>
+      );
+    }
+    return (
+      <div className="star-rating">
+        {stars} <span className="rating-text">{rating}/5 Stars</span>
+      </div>
+    );
+  };
+
   return (
-    <section className="reivew" id="review">
-      <h1 className="heading">client's <span>review</span></h1>
-
-      <div className="review-slider swiper-container">
-        <div className="swiper-wrapper">
-          <div className="swiper-slide box">
-            <i className="fas fa-quote-right"></i>
-            <div className="user">
-              <img src="images/img1.jpg" alt="" />
-              <div className="user-info">
-                <h3>nayana</h3>
-                <span>happy customer</span>
+    <section className="review" id="review">
+      <h1 className="heading">
+        client's <span>reviews</span>
+      </h1>
+      <div className="review-container">
+        {reviews.map((review) => (
+          <div key={review.id} className="review-box">
+            <div className="review-header">{renderStars(review.stars)}</div>
+            <div className="review-content">
+              <div className="review-user">
+                <img src={review.image} alt={`Profile of ${review.name}`} className="review-image" />
+                <div className="review-user-info">
+                  <h3>Name: {review.name}</h3>
+                  <p>Event: {review.event}</p>
+                </div>
               </div>
+              <p className="review-text">Review: {review.text}</p>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut
-              corrupti, ipsam iure nisi unde et assumenda perspiciatis
-              voluptatibus nihil.
-            </p>
           </div>
-
-          <div className="swiper-slide box">
-            <i className="fas fa-quote-right"></i>
-            <div className="user">
-              <img src="images/img2.jpg" alt="" />
-              <div className="user-info">
-                <h3>lisa</h3>
-                <span>happy customer</span>
-              </div>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut
-              corrupti, ipsam iure nisi unde et assumenda perspiciatis
-              voluptatibus nihil.
-            </p>
-          </div>
-
-          <div className="swiper-slide box">
-            <i className="fas fa-quote-right"></i>
-            <div className="user">
-              <img src="images/img3.jpg" alt="" />
-              <div className="user-info">
-                <h3>mary</h3>
-                <span>happy customer</span>
-              </div>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut
-              corrupti, ipsam iure nisi unde et assumenda perspiciatis
-              voluptatibus nihil.
-            </p>
-          </div>
-
-          <div className="swiper-slide box">
-            <i className="fas fa-quote-right"></i>
-            <div className="user">
-              <img src="images/img4.jpg" alt="" />
-              <div className="user-info">
-                <h3>rose</h3>
-                <span>happy customer</span>
-              </div>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut
-              corrupti, ipsam iure nisi unde et assumenda perspiciatis
-              voluptatibus nihil.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

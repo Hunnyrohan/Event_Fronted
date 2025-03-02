@@ -1,9 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';  // Correct import for React 19
+import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-// Create a root element and render the app
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
