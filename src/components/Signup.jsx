@@ -17,7 +17,7 @@ const Signup = () => {
 
     try {
       console.log('Sending request to backend'); // Log request initiation
-      const response = await axios.post('/api/auth/signup', {
+      const response = await axios.post('/api/auth/register', {
         first_name: name.split(' ')[0],
         last_name: name.split(' ')[1] || '',
         email,
